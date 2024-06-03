@@ -132,6 +132,10 @@ The following tools were used in the design and development of this project:
 ### Column Count Check
 - Ensure all necessary columns are present in the dataset.
 - Check for any unexpected or missing columns after data processing.
+- To perform a column count check in SQL, you generally want to ensure that all required columns exist and are correctly named in 
+  your tables. Here’s an alternative SQL approach for verifying columns using SQL queries:
+
+  ![Example of Data](https://github.com/josephsackett/SQL-Projects/blob/main/Images/SQLcolumncheck.png?raw=true)
 
 ### Duplicate Check
 - Confirm that all duplicate entries have been removed.
