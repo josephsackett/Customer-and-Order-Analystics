@@ -1,4 +1,4 @@
-# SQL-Projects
+# Customer and Order Analytics
 
 ## Table of Contents
 1. [Objective](#objective)
@@ -36,7 +36,88 @@ The data for this project is sourced from the BIT_DB SQLite database. It include
 - `customers`: Contains columns such as `order_id` and `acctnum`.
 - `FebSales`, `JanSales`, `MarSales`, `MaySales`: Each of these tables contains similar columns to `AprSales`.
 
-#In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
+## Stages
+
+1. **Data Acquisition**: 
+   - Gather data from the BIT_DB SQLite database, including tables such as `AprSales`, `FebSales`, `JanSales`, `MarSales`, `MaySales`, and `customers`.
+
+2. **Data Exploration**:
+   - Inspect the data to understand its structure and content.
+   - Identify key attributes and any potential data quality issues.
+
+3. **Data Cleaning**:
+   - Remove duplicates, handle missing values, and correct any inconsistencies in the data.
+   - Ensure data types are appropriate for analysis.
+
+4. **Data Transformation**:
+   - Transform raw data into a suitable format for analysis.
+   - Create new features if necessary to enhance analysis.
+
+5. **Data Analysis**:
+   - Perform SQL queries to analyze customer and order data.
+   - Generate insights and identify trends, patterns, and anomalies.
+
+6. **Visualization and Reporting**:
+   - Visualize the results using charts and graphs to present findings clearly.
+   - Compile a report summarizing the analysis and key insights.
+
+7. **Conclusion and Recommendations**:
+   - Summarize the key findings of the analysis.
+   - Provide actionable recommendations based on the insights obtained.
+
+## Design
+### Dashboard Components Required
+To effectively visualize and analyze the customer and order data, the following dashboard components are required:
+- **Sales Overview**: Total sales, sales by month, and sales by product category.
+- **Customer Demographics**: Breakdown of customers by age, gender, location, and other relevant demographics.
+- **Order Details**: Number of orders, average order value, and order frequency.
+- **Product Performance**: Sales performance of individual products, including top-selling and low-performing products.
+- **Location Analysis**: Sales performance by location, highlighting high-performing and underperforming regions.
+
+### Mockup
+Below is a mockup of the Tableau dashboard that was created to visualize the data insights. (Here you will insert images of your Tableau dashboard mockups)
+
+### Tools Used
+The following tools were used in the design and development of this project:
+- **SQLite**: For data storage and querying.
+- **Tableau**: For data visualization and dashboard creation.
+- **Excel**: For additional data manipulation and analysis.
+
+## Development
+### Data Exploration Steps
+- **Inspect Data**: Understand the structure, content, and types of data available in the BIT_DB SQLite database.
+- **Identify Key Attributes**: Determine important attributes for analysis such as `orderID`, `Product`, `Quantity`, `price`, `orderdate`, and `location`.
+
+### Data Exploration Notes
+- Data contains customer orders, product details, sales dates, and sales locations.
+- Initial exploration reveals missing values and potential duplicates that need to be addressed.
+
+### Data Cleaning
+1. **Remove Duplicates**: Ensure each order is unique.
+   - Utilize Excel’s Remove Duplicates feature to eliminate duplicate entries based on the `order_id` column.
+2. **Handle Missing Values**: Fill or exclude missing values where necessary.
+   - **Filter Out Blank Rows**:
+     - Select the data range and apply filters.
+     - Click on the filter drop-down arrow in the `order_id` column header.
+     - Uncheck (Blanks) to filter out blank rows.
+     - Select and delete the filtered rows.
+   - **Filter Out Null Values**:
+     - Click on the filter drop-down arrow in the `order_id` column header.
+     - Uncheck (null) to filter out null values.
+     - Select and delete the filtered rows.
+   - **Filter Out Specific Unwanted Values ("Order ID")**:
+     - Click on the filter drop-down arrow in the `order_id` column header.
+     - Uncheck "Order ID" to exclude these placeholder values.
+     - Select and delete the filtered rows.
+3. **Correct Data Types**: Ensure all data types are appropriate for the analysis (e.g., dates are in datetime format).
+   - Use Excel’s Format Cells feature to set the appropriate data types for each column (e.g., setting `acctnum` to Number).
+     
+
+### Transform the Data
+1. **Create New Features**: Derived new attributes such as total revenue per product (`quantity * price`).
+   - Add a column to calculate `total_revenue` by multiplying `quantity` and `price`.
+2. **Aggregate Data**: Summarize data to higher levels (e.g., total sales per month, sales by product category).
+   - Used pivot tables and summary functions in Excel to calculate total sales per month or by product category.
 
 #1. How many orders were placed in January? 
 SELECT COUNT(orderid)
