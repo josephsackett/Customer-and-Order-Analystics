@@ -122,6 +122,25 @@ The following tools were used in the design and development of this project:
 2. **Aggregate Data**: Summarize data to higher levels (e.g., total sales per month, sales by product category).
    - Used pivot tables and summary functions in Excel to calculate total sales per month or by product category.
 
+## Testing
+### Row Count Check
+- Verify that the number of rows in the dataset matches the expected count after data cleaning.
+- Use SQL or Excel functions to count the rows and ensure no data loss during cleaning and transformation.
+
+  ![Example of Data](https://github.com/josephsackett/SQL-Projects/blob/main/SQLrowcount.png?raw=true)
+
+### Column Count Check
+- Ensure all necessary columns are present in the dataset.
+- Check for any unexpected or missing columns after data processing.
+
+### Duplicate Check
+- Confirm that all duplicate entries have been removed.
+- Use SQL queries or Excel functions to identify any remaining duplicates.
+
+### Missing Values Check
+- Check for any remaining missing values in critical columns.
+- Ensure that all missing values have been handled appropriately during the data cleaning process.
+
 #1. How many orders were placed in January? 
 SELECT COUNT(orderid)
 FROM BIT_DB.JanSales
