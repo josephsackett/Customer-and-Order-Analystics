@@ -113,7 +113,7 @@ The following tools were used in the design and development of this project:
    - Use Excel’s Format Cells feature to set the appropriate data types for each column (e.g., setting `acctnum` to Number).
    - Example of errors found in data in photo below:
      
-     ![Alt Text]([1.png](https://github.com/josephsackett/SQL-Projects/blob/main/1.png?raw=true))
+  ![Example of Data](https://github.com/josephsackett/SQL-Projects/blob/main/1.png?raw=true)
      
 
 ### Transform the Data
