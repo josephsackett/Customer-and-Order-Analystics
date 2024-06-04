@@ -153,11 +153,8 @@ The following tools were used in the design and development of this project:
  ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/TotalJanSales.png?raw=true)
 
 #2. How many of those orders were for an iPhone? 
-SELECT COUNT(orderid)
-FROM BIT_DB.JanSales
-WHERE Product='iPhone'
-AND length(orderid) = 6 
-AND orderid <> 'Order ID'
+
+ ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/JanIphoneorders.png?raw=true)
 
 #3. Select the customer account numbers for all the orders that were placed in February. 
 SELECT distinct acctnum
