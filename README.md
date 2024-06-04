@@ -157,13 +157,8 @@ The following tools were used in the design and development of this project:
  ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/JanIphoneorders.png?raw=true)
 
 #3. Select the customer account numbers for all the orders that were placed in February. 
-SELECT distinct acctnum
-FROM BIT_DB.customers cust
 
-INNER JOIN BIT_DB.FebSales Feb
-ON cust.order_id=FEB.orderid
-WHERE length(orderid) = 6 
-AND orderid <> 'Order ID'
+ ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/AcctOrderFeb.png?raw=true)
 
 #4. Which product was the cheapest one sold in January, and what was the price? 
 SELECT distinct Product, price
