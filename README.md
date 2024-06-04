@@ -145,11 +145,12 @@ The following tools were used in the design and development of this project:
 - Check for any remaining missing values in critical columns.
 - Ensure that all missing values have been handled appropriately during the data cleaning process.
 
+## Analysis
+### Sales Analysis
+
 #1. How many orders were placed in January? 
-SELECT COUNT(orderid)
-FROM BIT_DB.JanSales
-WHERE length(orderid) = 6 
-AND orderid <> 'Order ID'
+
+ ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/TotalJanSales.png?raw=true)
 
 #2. How many of those orders were for an iPhone? 
 SELECT COUNT(orderid)
