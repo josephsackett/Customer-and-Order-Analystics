@@ -166,10 +166,9 @@ The following tools were used in the design and development of this project:
 ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/CheapestItemJan.png?raw=true)
 
 #5. What is the total revenue for each product sold in January?
-SELECT sum(quantity)*price as revenue
-,product
-FROM BIT_DB.JanSales
-GROUP BY product
+ - Revenue can be calculated using the number of products sold and the price of the products
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/TotalRevEachPrJan.png?raw=true)
 
 #6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
 select 
