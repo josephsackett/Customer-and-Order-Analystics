@@ -161,7 +161,7 @@ The following tools were used in the design and development of this project:
  ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/AcctOrderFeb.png?raw=true)
 
 #4. Which product was the cheapest one sold in January, and what was the price?
-# Showed two ways to tackle this question.
+ - Showed two ways to tackle this question.
 
 ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/CheapestItemJan.png?raw=true)
 
