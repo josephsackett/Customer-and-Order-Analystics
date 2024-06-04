@@ -236,5 +236,5 @@ FROM BIT_DB.JanSales
 GROUP BY product
 ORDER BY sum(quantity*price) desc 
 LIMIT 1;
-# In this question, I'm using GROUP BY product. 
-# The price of each individual product doesn't change. 
+- In this question, I'm using GROUP BY product. 
+- The price of each individual product doesn't change. 
