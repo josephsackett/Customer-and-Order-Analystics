@@ -160,13 +160,10 @@ The following tools were used in the design and development of this project:
 
  ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/AcctOrderFeb.png?raw=true)
 
-#4. Which product was the cheapest one sold in January, and what was the price? 
-SELECT distinct Product, price
-FROM BIT_DB.JanSales
-WHERE  price in (SELECT min(price) FROM BIT_DB.JanSales)
-#OR 
-SELECT distinct product, price FROM BIT_DB.JanSales 
-ORDER BY price ASC LIMIT 1
+#4. Which product was the cheapest one sold in January, and what was the price?
+# Showed two ways to tackle this question.
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/CheapestItemJan.png?raw=true)
 
 #5. What is the total revenue for each product sold in January?
 SELECT sum(quantity)*price as revenue
