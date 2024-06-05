@@ -171,24 +171,12 @@ The following tools were used in the design and development of this project:
 ![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/TotalRevEachPrJan.png?raw=true)
 
 #6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
-select 
-sum(Quantity), 
-product, 
-sum(quantity)*price as revenue
-FROM BIT_DB.FebSales 
-WHERE location = '548 Lincoln St, Seattle, WA 98101'
-GROUP BY product
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/FebProductTotal.png?raw=true)
 
 #7. How many customers ordered more than 2 products at a time, and what was the average amount spent for those customers? 
-select 
-count(distinct cust.acctnum), 
-avg(quantity*price)
-FROM BIT_DB.FebSales Feb
-LEFT JOIN BIT_DB.customers cust
-ON FEB.orderid=cust.order_id
-WHERE Feb.Quantity>2
-AND length(orderid) = 6 
-AND orderid <> 'Order ID'
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/AvgPriceperTwoitems.png?raw=true)
 
 #8. List all the products sold in Los Angeles in February, and include how many of each were sold.
 #Note: 'like' searches the column you give it for the values you type in after like. '%' tells the SQL code that you are searching for a value that can match anything.
