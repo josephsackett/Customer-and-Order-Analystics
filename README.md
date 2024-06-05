@@ -180,49 +180,27 @@ The following tools were used in the design and development of this project:
 
 #8. List all the products sold in Los Angeles in February, and include how many of each were sold.
 #Note: 'like' searches the column you give it for the values you type in after like. '%' tells the SQL code that you are searching for a value that can match anything.
-SELECT Product, SUM(quantity)
-FROM BIT_DB.FebSales
-WHERE location like '%Los Angeles%'
-GROUP BY Product;
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/TotalProdSoldLA.png?raw=true)
 
 #9. Which locations in New York received at least 3 orders in January, and how many orders did they each receive?
-SELECT distinct location, count(orderID)
-FROM BIT_DB.JanSales
-WHERE location LIKE '%NY%'
-AND length(orderid) = 6 
-AND orderid <> 'Order ID'
-GROUP BY location
-HAVING count(orderID)>2;
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/NYLocItems.png?raw=true)
 
 #10. How many of each type of headphone was sold in February?
-SELECT sum(Quantity) as quantity,
-Product
-FROM BIT_DB.FebSales 
-WHERE Product like '%Headphones%'
-GROUP BY Product;
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/TypeHeadPhone.png?raw=true)
 
 #11. What was the average amount spent per account in February?
-SELECT avg(quantity*price)
-FROM BIT_DB.FebSales Feb
-LEFT JOIN BIT_DB.customers cust
-ON FEB.orderid=cust.order_id
-WHERE length(orderid) = 6 
-AND orderid <> 'Order ID';
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/AvgSpentFeb.png?raw=true)
 
 #12. What was the average quantity of products purchased per account in February? 
-SELECT SUM(quantity)/count(cust.acctnum)
-FROM BIT_DB.FebSales Feb
-LEFT JOIN BIT_DB.customers cust
-ON FEB.orderid=cust.order_id
-WHERE length(orderid) = 6 
-AND orderid <> 'Order ID';
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/AvgQuanityPurchFeb.png?raw=true)
 
 #13. Which product brought in the most revenue in January and how much revenue did it bring in total? 
-SELECT product, 
-sum(quantity*price)
-FROM BIT_DB.JanSales 
-GROUP BY product
-ORDER BY sum(quantity*price) desc 
-LIMIT 1;
+
+![Example of Data](https://github.com/josephsackett/Customer-and-Order-Analystics/blob/main/Images/ProdMostRevJan.png?raw=true)
 - In this question, I'm using GROUP BY product. 
 - The price of each individual product doesn't change. 
